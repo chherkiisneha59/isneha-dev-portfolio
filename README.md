@@ -148,14 +148,7 @@ cd skycast-weather
 npm install
 ```
 
-### 3. Get an API Key
-
-1. Go to [OpenWeatherMap](https://openweathermap.org/api)
-2. Sign up for a free account
-3. Navigate to **API Keys** in your profile
-4. Copy your API key
-
-### 4. Set Up Environment Variables
+### 3. Set Up Environment Variables
 
 ```bash
 cp .env.example .env
@@ -167,7 +160,7 @@ Edit `.env` and add your API key:
 VITE_OPENWEATHER_API_KEY=your_actual_api_key_here
 ```
 
-### 5. Start Development Server
+### 4. Start Development Server
 
 ```bash
 npm run dev
@@ -175,51 +168,11 @@ npm run dev
 
 The app will open at `http://localhost:3000` 🎉
 
-### 6. Build for Production
+### 5. Build for Production
 
 ```bash
 npm run build
 npm run preview
-```
-
----
-
-## 🌐 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your project to GitHub
-2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
-3. Click **"New Project"** → Import your repository
-4. Add Environment Variable:
-   - Name: `VITE_OPENWEATHER_API_KEY`
-   - Value: Your API key
-5. Click **Deploy** ✅
-
-### Deploy to Netlify
-
-1. Push your project to GitHub
-2. Go to [netlify.com](https://netlify.com) and sign in
-3. Click **"Add new site"** → **"Import an existing project"**
-4. Select your repo
-5. Set build command: `npm run build`
-6. Set publish directory: `dist`
-7. Go to **Site settings → Environment variables** and add:
-   - `VITE_OPENWEATHER_API_KEY` = Your API key
-8. Click **Deploy** ✅
-
-### Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "🚀 Initial commit — SkyCast Weather App"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/skycast-weather.git
-git push -u origin main
-```
-
----
 
 ## 📱 Screenshots
 
@@ -227,44 +180,10 @@ git push -u origin main
 |---|---|---|
 | Dark mode on phone | Light mode on phone | Full desktop view |
 
----
-
-## 🔑 API Reference
-
-This app uses the [OpenWeatherMap API](https://openweathermap.org/api):
-
-| Endpoint | Description |
-|---|---|
-| `/weather` | Current weather by city or coordinates |
-| `/forecast` | 5-day / 3-hour forecast |
-| `/geo/1.0/direct` | Geocoding (city → coordinates) |
-| `/geo/1.0/reverse` | Reverse geocoding (coordinates → city) |
-
-**Free tier:** 60 calls/minute, 1,000,000 calls/month
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please open an issue first to discuss what you'd like to change.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
 
 <div align="center">
 
-**Built with ❤️ by [Your Name]**
+**Built with ❤️ by [Isneha Chherki]
 
 ⭐ Star this repo if you found it useful!
 
