@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/isneha-dev-portfolio/sw.js', { scope: '/isneha-dev-portfolio/' })})}
