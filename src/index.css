@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Base Styles ===== */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.5);
+  }
+}
+
+/* ===== Glassmorphism Components ===== */
+@layer components {
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl border border-white/10 shadow-glass;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-card-light {
+    @apply relative overflow-hidden rounded-2xl border border-gray-200/50 shadow-glass;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-input {
+    @apply relative overflow-hidden rounded-xl border border-white/10;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-input-light {
+    @apply relative overflow-hidden rounded-xl border border-gray-200/60;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-button {
+    @apply relative overflow-hidden rounded-xl border border-white/15 px-4 py-2.5 font-medium transition-all duration-300;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .glass-button:active {
+    transform: translateY(0);
+  }
+
+  /* Horizontal scroll for forecast cards */
+  .forecast-scroll {
+    @apply flex gap-3 overflow-x-auto pb-2;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .forecast-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .forecast-scroll > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  /* Shimmer loading effect */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.05) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+
+  .shimmer-light {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 25%,
+      rgba(0, 0, 0, 0.08) 50%,
+      rgba(0, 0, 0, 0.03) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}
+
+/* ===== Weather Background Animations ===== */
+@layer utilities {
+  .bg-weather-clear {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 30%, #2563eb 70%, #3b82f6 100%);
+  }
+
+  .bg-weather-clear-light {
+    background: linear-gradient(135deg, #87ceeb 0%, #4da6ff 30%, #2b8aed 70%, #1e7ad8 100%);
+  }
+
+  .bg-weather-clouds {
+    background: linear-gradient(135deg, #1a1a2e 0%, #34495e 40%, #5d6d7e 70%, #7f8c8d 100%);
+  }
+
+  .bg-weather-clouds-light {
+    background: linear-gradient(135deg, #b0c4de 0%, #8faabe 40%, #6b8ea8 70%, #87a4be 100%);
+  }
+
+  .bg-weather-rain {
+    background: linear-gradient(135deg, #0c1220 0%, #1a2332 30%, #2c3e50 60%, #34495e 100%);
+  }
+
+  .bg-weather-rain-light {
+    background: linear-gradient(135deg, #7b9bb5 0%, #5c829a 30%, #4a7085 60%, #3d6478 100%);
+  }
+
+  .bg-weather-thunderstorm {
+    background: linear-gradient(135deg, #0a0a14 0%, #1a1a2e 30%, #2d1b69 60%, #44337a 100%);
+  }
+
+  .bg-weather-thunderstorm-light {
+    background: linear-gradient(135deg, #7b6ba5 0%, #6a5a95 30%, #5a4a85 60%, #4a3a75 100%);
+  }
+
+  .bg-weather-snow {
+    background: linear-gradient(135deg, #1a1a3e 0%, #2d3a5e 30%, #4a5a7e 60%, #6b7a9e 100%);
+  }
+
+  .bg-weather-snow-light {
+    background: linear-gradient(135deg, #d4e5f7 0%, #b8d4f0 30%, #9dc3e9 60%, #82b2e2 100%);
+  }
+
+  .bg-weather-mist {
+    background: linear-gradient(135deg, #1a1a2a 0%, #2a2a3a 30%, #4a4a5a 60%, #6a6a7a 100%);
+  }
+
+  .bg-weather-mist-light {
+    background: linear-gradient(135deg, #c8c8d4 0%, #b0b0be 30%, #9898a8 60%, #808092 100%);
+  }
+
+  .bg-weather-default {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  }
+
+  .bg-weather-default-light {
+    background: linear-gradient(135deg, #87ceeb 0%, #6bb5d8 50%, #4f9cc5 100%);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
