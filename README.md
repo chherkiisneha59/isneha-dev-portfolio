@@ -180,10 +180,7 @@ npm run preview
 |---|---|---|
 | Dark mode on phone | Light mode on phone | Full desktop view |
 
-
-<div align="center">
-
-**Built with ❤️ by [Isneha Chherki]
+Built with ❤️ by [Isneha Chherki]
 
 ⭐ Star this repo if you found it useful!
 
