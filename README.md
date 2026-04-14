@@ -10,7 +10,7 @@
 
 A beautiful, production-ready weather application built with React, Tailwind CSS, and Framer Motion. Features real-time weather data, 5-day forecasts, geolocation, favorites, and stunning weather-based dynamic backgrounds.
 
-[Live Demo →]  https://skycasts-weatherapp.netlify.app· [Report Bug →](../../issues) · [Request Feature →](../../issues)
+[Live Demo →]  https://skycasts-weatherapp.netlify.app
 
 </div>
 
