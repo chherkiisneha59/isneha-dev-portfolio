@@ -155,9 +155,6 @@ cp .env.example .env
 ```
 
 Edit `.env` and add your API key:
-
-```
-VITE_OPENWEATHER_API_KEY=your_actual_api_key_here
 ```
 
 ### 4. Start Development Server
